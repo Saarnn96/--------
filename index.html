@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>מערכת ניהול לוזים</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>מערכת ניהול לוזים</h1>
+        </header>
+
+        <main>
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="daily">לוז יומי</button>
+                <button class="tab-btn" data-tab="weekly">לוז שבועי</button>
+                <button class="tab-btn" data-tab="history">היסטוריה</button>
+            </div>
+
+            <div class="tab-content active" id="daily">
+                <h2>לוז יומי</h2>
+                <div class="schedule-form">
+                    <input type="text" id="daily-task" placeholder="הוסף משימה חדשה">
+                    <button onclick="addDailyTask()">הוסף</button>
+                </div>
+                <ul id="daily-tasks" class="task-list"></ul>
+            </div>
+
+            <div class="tab-content" id="weekly">
+                <h2>לוז שבועי</h2>
+                <div class="schedule-form">
+                    <input type="text" id="weekly-task" placeholder="הוסף משימה חדשה">
+                    <select id="weekday">
+                        <option value="sunday">ראשון</option>
+                        <option value="monday">שני</option>
+                        <option value="tuesday">שלישי</option>
+                        <option value="wednesday">רביעי</option>
+                        <option value="thursday">חמישי</option>
+                        <option value="friday">שישי</option>
+                        <option value="saturday">שבת</option>
+                    </select>
+                    <button onclick="addWeeklyTask()">הוסף</button>
+                </div>
+                <div id="weekly-tasks" class="weekly-container"></div>
+            </div>
+
+            <div class="tab-content" id="history">
+                <h2>היסטוריית משימות</h2>
+                <div class="history-filters">
+                    <select id="history-type">
+                        <option value="all">כל המשימות</option>
+                        <option value="daily">משימות יומיות</option>
+                        <option value="weekly">משימות שבועיות</option>
+                    </select>
+                    <select id="history-month">
+                        <option value="">בחר חודש</option>
+                        <option value="1">ינואר</option>
+                        <option value="2">פברואר</option>
+                        <option value="3">מרץ</option>
+                        <option value="4">אפריל</option>
+                        <option value="5">מאי</option>
+                        <option value="6">יוני</option>
+                        <option value="7">יולי</option>
+                        <option value="8">אוגוסט</option>
+                        <option value="9">ספטמבר</option>
+                        <option value="10">אוקטובר</option>
+                        <option value="11">נובמבר</option>
+                        <option value="12">דצמבר</option>
+                    </select>
+                    <select id="history-year">
+                        <option value="">בחר שנה</option>
+                    </select>
+                    <button onclick="filterHistory()">סנן</button>
+                </div>
+                <div id="history-tasks" class="history-container"></div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
