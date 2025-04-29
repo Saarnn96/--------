@@ -53,23 +53,21 @@ h1::after {
 .tab-btn {
     padding: 12px 25px;
     border: none;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: #B799E7;
     cursor: pointer;
     border-radius: 25px;
     transition: all 0.3s ease;
     font-weight: 600;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .tab-btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    background-color: #AA78F8;
+    color: white;
 }
 
 .tab-btn.active {
-    background-color: #2ecc71;
+    background-color: #AA78F8;
     color: white;
-    box-shadow: 0 4px 15px rgba(46, 204, 113, 0.4);
 }
 
 .tab-content {
@@ -138,13 +136,11 @@ button {
     cursor: pointer;
     transition: all 0.3s ease;
     font-weight: 600;
-    box-shadow: 0 4px 15px rgba(46, 204, 113, 0.3);
 }
 
 button:hover {
     background-color: #27ae60;
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(46, 204, 113, 0.4);
 }
 
 .task-list {
@@ -209,25 +205,26 @@ button:hover {
 }
 
 .delete-btn {
-    background-color: #e74c3c;
+    background-color: #F25F5C;
     padding: 8px 15px;
     font-size: 12px;
-    margin-left: 10px;
 }
 
 .delete-btn:hover {
-    background-color: #c0392b;
+    background-color: #F25F5C;
 }
 
 .edit-btn {
-    background-color: #2ecc71;
+    background-color: #B799E7;
     padding: 8px 15px;
     font-size: 12px;
     margin-left: 10px;
+    color: white;
 }
 
 .edit-btn:hover {
-    background-color: #27ae60;
+    background-color: #AA78F8;
+    transform: translateY(-2px);
 }
 
 .edit-input {
